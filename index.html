@@ -39,22 +39,6 @@
         <nav class="w-11/12 mx-auto h-66">
             <div class="navbar bg-[#F85559] rounded-full mt-4">
                 <div class="navbar-start">
-                    <div class="dropdown">
-                        <label tabindex="0" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </label>
-                        <ul tabindex="0"
-                            class="text-red-500 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Home</a></li>
-                            <li><a>About Us</a></li>
-                            <li><a>Shop</a></li>
-                            <li><a>All Fruits</a></li>
-                        </ul>
-                    </div>
                     <div class="navbar-center hidden lg:flex">
                         <ul class="text-white menu menu-horizontal px-1 font-medium text-lg">
                             <li><a>Home</a></li>
@@ -66,29 +50,44 @@
                 </div>
                 <img class="w-12" src="./images/logo.png" alt="">
                 <h1 class="btn btn-ghost text-white normal-case text-xl">Fruit Burst</h1>
-
-                <div class="navbar-end">
-                    <input type="text" placeholder="Search here"
-                        class="bg-[#FFF] rounded-full input input-bordered input-md w-full max-w-xs" />
+                <div class="md:flex hidden navbar-end relative">
+                    <input type="text" placeholder="Search here "
+                        class="bg-[#FFF] rounded-full  input input-bordered input-md w-full max-w-xs" />
                 </div>
-                <div class="">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="md:flex hidden">
+                    <i class="fa-solid absolute right-[120px] fa-magnifying-glass text-black"></i>
                 </div>
-
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="text-red-500 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <!-- banner section -->
         <section class="w-11/12 mx-auto my-10">
             <div>
-                <div class="carousel w-full relative">
+                <div class="carousel h-fit md:h-[500px] relative">
                     <!-- slide-1 -->
                     <div id="slide1" class="carousel-item relative w-full ">
-                        <img src="./images/banner1.png"
-                            class="w-full relative bg-gradient-to-r from-[#121212] to-[#121212]" />
-                        <div class="absolute justify-center items-center text-center mt-60 ml-[600px]">
-                            <h1 class="text-6xl font-bold  text-white">Exotic tastes at your <br> doorstep</h1>
-                            <p class="text-white  mt-6">We supply highly quality organic products</p>
-                            <button class="btn bg-[#F85559] p-3 mt-6 border-none text-white">Shop Now</button>
+                        <div class="hero h-full" style="background-image: url(./images/banner1.png);">
+                            <div class="hero-overlay bg-opacity-60"></div>
+                            <div class="absolute justify-center items-center text-center">
+                                <h1 class="lg:text-6xl mb:text-xl font-bold  text-white">Exotic tastes at your <br> doorstep</h1>
+                                <p class="text-white md:text-xs  mt-6">We supply highly quality organic products</p>
+                                <button class="btn bg-[#F85559] p-3 mt-6 border-none text-white">Shop Now</button>
+                            </div>
                         </div>
                         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide4" class="btn btn-circle">❮</a>
@@ -97,12 +96,13 @@
                     </div>
                     <!-- slide-2 -->
                     <div id="slide2" class="carousel-item relative w-full">
-                        <img src="./images/banner2.png"
-                            class="w-full relative bg-gradient-to-r from-[#121212] to-[#121212]" />
-                        <div class="absolute justify-center items-center text-center mt-60 ml-[600px]">
-                            <h1 class="text-6xl font-bold  text-white">Exotic tastes at your <br> doorstep</h1>
-                            <p class="text-white  mt-6">We supply highly quality organic products</p>
-                            <button class="btn bg-[#F85559] p-3 mt-6 border-none text-white">Shop Now</button>
+                        <div class="hero h-full" style="background-image: url(./images/banner2.png);">
+                            <div class="hero-overlay bg-opacity-60"></div>
+                            <div class="absolute justify-center items-center text-center">
+                                <h1 class="lg:text-6xl mb:text-xl font-bold  text-white">Exotic tastes at your <br> doorstep</h1>
+                                <p class="text-white  mt-6">We supply highly quality organic products</p>
+                                <button class="btn bg-[#F85559] p-3 mt-6 border-none text-white">Shop Now</button>
+                            </div>
                         </div>
                         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide1" class="btn btn-circle">❮</a>
@@ -112,8 +112,8 @@
                     <!-- slide-3 -->
                     <div id="slide3" class="carousel-item relative w-full">
                         <img src="./images/banner3.png"
-                            class="w-full relative bg-gradient-to-r from-[#121212] to-[#121212]" />
-                        <div class="absolute justify-center items-center text-center mt-60 ml-[600px]">
+                            class=" w-full mx-auto relative bg-gradient-to-r from-[#121212] to-[#121212]" />
+                        <div class="absolute justify-center items-center text-center mt-10 ml-[600px]">
                             <h1 class="text-6xl font-bold  text-white">Exotic tastes at your <br> doorstep</h1>
                             <p class="text-white  mt-6">We supply highly quality organic products</p>
                             <button class="btn bg-[#F85559] p-3 mt-6 border-none text-white">Shop Now</button>
@@ -127,7 +127,7 @@
                     <div id="slide4" class="carousel-item relative w-full">
                         <img src="./images/banner4.png"
                             class="w-full relative bg-gradient-to-r from-[#121212] to-[#121212]" />
-                        <div class="absolute justify-center items-center text-center mt-60 ml-[600px]">
+                        <div class="absolute justify-center items-center text-center mt-10 ml-[600px]">
                             <h1 class="text-6xl font-bold  text-white">Exotic tastes at your <br> doorstep</h1>
                             <p class="text-white  mt-6">We supply highly quality organic products</p>
                             <button class="btn bg-[#F85559] p-3 mt-6 border-none text-white">Shop Now</button>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div
-                    class=" flex w-8/12 mx-auto ml-56 p-3 shadow absolute z-50 shadow-[#0000000D] bg-[#FFF] rounded-lg justify-around items-center text-center -mt-20">
+                    class="sm:flex hidden  w-8/12 mx-auto ml-56 p-3 shadow absolute z-50 shadow-[#0000000D] bg-[#FFF] rounded-lg justify-around items-center text-center -mt-20">
                     <div>
                         <img src="./images/fruit1.png" alt="">
                         <p>Grapes</p>
@@ -165,16 +165,16 @@
         </section>
     </header>
     <!-- Deal of the day -->
-    <main class="w-11/12 mx-auto my-40">
-        <div class="flex justify-between items-center">
-            <div>
+    <main class="w-11/12 mx-auto mt-40">
+        <div class="grid md:grid-col lg:grid-cols-2 ">
+            <div class="flex-1 md:text-left lg:text-left space-y-3">
                 <h1 class="text-[#121212] text-4xl font-bold">Deal of the day</h1>
                 <p class="mt-6 font-medium text-[#12121263]">Contrary to popular belief, is not simply random text. It
                     has roots in a piece of classical <br> Latin
                     literature from 45 BC, making it over 2000 years old.
                 </p>
             </div>
-            <div class="flex gap-5">
+            <div class="flex gap-5 flex-1 justify-end">
                 <div>
                     <div class="flex text-center justify-center gap-8 items-center">
                         <h1 class="text-[#121212] text-4xl font-bold">29</h1>
@@ -386,12 +386,15 @@
             <button class="btn bg-[#F85559] text-white font-semibold">Shop All</button>
         </div>
         <!-- Meet the team section -->
-        <section class="bg-hero-bg bg-no-repeat bg-cover bg-center h-[690px] W-[1440PX] mx-auto my-10 bg-opacity-100">
-            <h1 class="text-center font-bold text-5xl text-white p-10">Meet the team section</h1>
-            <p class="text-base font-medium text-white text-center">Contrary to popular belief, is not simply random
-                text. It
-                has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-evenly mt-16">
+        <section class="bg-hero-bg bg-no-repeat bg-cover bg-center mx-auto my-12  bg-opacity-60 p-10">
+            <div class="text-center p-10 space-y-3">
+                <h1 class=" font-bold text-5xl text-white">Meet the team section</h1>
+                <p class="text-base font-medium text-white ">Contrary to popular belief, is not simply random
+                    text. It
+                    has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-evenly gap-10 p-10">
                 <div class="">
                     <div class="flex justify-center">
                         <img src="./images/member1.png" alt="">
@@ -462,7 +465,6 @@
             <a href="">Shop</a>
             <a href="">All Fruits</a>
             <a href="">Support</a>
-            <a href="">My Account</a>
         </div>
         <div class="flex gap-7 text-white justify-center items-center mt-8">
             <span><i class="fa-brands font-bold text-4xl fa-square-twitter"></i></span>
